@@ -1,0 +1,3 @@
+web: ./bin/rails server -p 24675
+sidekiq: bundle exec sidekiq
+mailer: mailcatcher --foreground
