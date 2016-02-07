@@ -9,10 +9,14 @@
     between the land and the ship.
   date:
     1980-05-21
+  notify:
+    true
 - title:
     Bill & Ted's excellent adventure
   date:
     1990-04-13
+  notify:
+    true
   description:
     Fourscore and seven minutes ago... we, your forefathers, were brought forth
     upon a most excellent adventure conceived by our new friends, Bill... and
@@ -23,6 +27,8 @@
     The Hitchhiker's Guide to the Galaxy
   date:
     2005-04-28
+  notify:
+    true
   description:
     Curiously, the only thing that went through the mind of the bowl of
     petunias, as it fell, was, "Oh no, not again!" Many people have speculated
@@ -32,6 +38,8 @@
     Back to the Future
   date:
     1985-12-04
+  notify:
+    true
   description:
     Now, remember. According to my theory, you interfered with your parents'
     first meeting. If they don't meet, they won't fall in love, they won't get
@@ -42,12 +50,11 @@
     Blade runner
   date:
     1982-09-09
+  notify:
+    true
   description:
     I don't know why he saved my life. Maybe in those last moments he loved life
     more than he ever had before. Not just his life - anybody's life; my life.
     All he'd wanted were the same answers the rest of us want. Where did I come
     from? Where am I going? How long have I got? All I could do was sit there
     and watch him die.
-
-
-

@@ -4,6 +4,7 @@ class Movie < BaseModel
   attribute :title
   attribute :date
   attribute :description
+  attribute :notify, lambda { |value| !!value }
 
   reference :user, :User
 
