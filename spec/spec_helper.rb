@@ -1,3 +1,6 @@
+# In order to be able to require files in app/* without require_relative
+$:.unshift '.'
+
 # Custom setup
 require 'dotenv'
 Dotenv.load! '.env.test'
