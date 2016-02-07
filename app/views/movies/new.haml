@@ -1,4 +1,3 @@
-
 .container
   .row
     .col-md-12
@@ -8,16 +7,17 @@
     .col-md-9
       = form_tag movies_path, { class: 'form', role: 'form' } do
         .form-group{ class: @validator.class_for(:title) }
-          %label{ for:  'title' } Title
+          %label{ for: 'title' } Title
           %input.form-control{ name: 'title', value: @movie.title  }
         .form-group{ class: @validator.class_for(:description) }
           %label{ for: 'description' } Description
           %textarea.form-control{ name: 'description' }
             = @movie.description
         .form-group{ class: @validator.class_for(:date) }
-          %label{ for:  'date' } Date
+          %label{ for: 'date' } Date
           %input.form-control{ name: 'date', type: 'date', value: @movie.date }
+        .form-group{ class: @validator.class_for(:notify) }
+          %label{ for: 'notify' }= t('movies.new.notify')
+          %input.form-control{ name: 'notify', type: 'checkbox', value: @movie.notify }
         .form-group
           = submit_tag 'Add movie', class: 'btn btn-primary'
-       
-

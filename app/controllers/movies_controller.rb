@@ -49,6 +49,6 @@ class MoviesController < ApplicationController
   end
 
   def _create_params
-    params.permit(:title, :description, :date)
+    params.permit(:title, :description, :date, :notify)
   end
 end

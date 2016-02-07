@@ -21,6 +21,40 @@ RSpec.describe MoviesController, :type => :controller do
       post :create
       expect(response).to have_http_status(:success)
     end
-  end
 
+    context 'with authorization' do
+      let(:notify) { false }
+      let(:movie_attrs) {
+        {
+          title: 'title',
+          description: 'desc',
+          date: '1957-10-02',
+          notify: notify
+        }
+      }
+
+      before {
+        expect(controller).to receive(:authorize!).and_return(true)
+      }
+
+      it 'redirects to the root path' do
+        post :create, movie_attrs
+        expect(response).to redirect_to(root_path)
+      end
+
+      it 'creates a new movie' do
+        expect { post :create, movie_attrs }.to change { Movie.all.count }.by(1)
+      end
+
+      context 'the created movie' do
+        let(:movie) { Movie.all.first }
+
+        before { post :create, movie_attrs }
+
+        it 'assigns the notify flag' do
+          expect(movie.notify).to eq(notify)
+        end
+      end
+    end
+  end
 end
