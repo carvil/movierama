@@ -13,6 +13,9 @@ gem 'unicorn'
 # Sidekiq for background processing
 gem 'sidekiq'
 
+# Open emails in development
+gem 'mailcatcher', group: :development
+
 # Productio nmonitoring
 gem 'newrelic_rpm'
 # Fixes Rails architecture kludges
