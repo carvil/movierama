@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'ohm'
 require 'active_support/core_ext/time'
 require 'app/models/base_model'
 require 'app/models/user'
