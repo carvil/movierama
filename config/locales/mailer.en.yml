@@ -1,0 +1,5 @@
+en:
+  user_mailer:
+    vote:
+      subject: "New vote for %{title}"
+      body: "A user has left a vote: %{vote}"
